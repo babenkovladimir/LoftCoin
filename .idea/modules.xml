@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LoftCoin.iml" filepath="$PROJECT_DIR$/LoftCoin.iml" />
+      <module fileurl="file://D:\My Documents\A N D R O I D\LoftCoin\LoftCoin.iml" filepath="D:\My Documents\A N D R O I D\LoftCoin\LoftCoin.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\My Documents\A N D R O I D\LoftCoin\app\app.iml" filepath="D:\My Documents\A N D R O I D\LoftCoin\app\app.iml" />
     </modules>
   </component>
 </project>

@@ -1,5 +1,7 @@
 package com.example.vladimirbabenko.loftcoin;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Class for Gson
  */
@@ -22,11 +24,19 @@ package com.example.vladimirbabenko.loftcoin;
 //    "percent_change_7d": "6.32",
 //    "last_updated": "1520016267"
 
+/*
+* Если поля совпадают, тогда всё ок. Иначе необходимо подсказать при помощи аннотауии
+* @SerializedName()
+*
+* */
+
 
 public class Coin {
-  public String id;
-  public String name;
-  public String symbol;
-  public double priceUsd;
-  public double percentChange;
+    public String id;
+    public String name;
+    public String symbol;
+    @SerializedName("price_usd")
+    public double priceUsd;
+    @SerializedName("percent_change_24h")
+    public double percentChange;
 }
