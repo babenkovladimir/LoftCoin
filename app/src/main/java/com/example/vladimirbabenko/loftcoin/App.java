@@ -1,6 +1,8 @@
 package com.example.vladimirbabenko.loftcoin;
 
 import android.app.Application;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /*
 * Этот класс предназначен для инициалтзации наших библиотек.
@@ -8,7 +10,24 @@ import android.app.Application;
 
 public class App extends Application {
 
+  private Api api;
+
   @Override public void onCreate() {
     super.onCreate();
+
+    // Retrofit adjustment
+
+    Retrofit.Builder builder = new Retrofit.Builder();
+
+    Retrofit retrofit = builder
+        .baseUrl(Api.baseUrl)
+        .addConverterFactory(GsonConverterFactory.create())
+        .build();
+
+    api = retrofit.create(Api.class);
+  }
+
+  public Api getApi() {
+    return api;
   }
 }
